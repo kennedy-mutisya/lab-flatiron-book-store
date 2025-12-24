@@ -1,18 +1,66 @@
-
-.list ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 20px;
 }
 
-.list-li{
-    list-style: none;
-    width:200px;
-    box-shadow: 8px 10px #c9c8c8;
-    padding: 5px;
-    
+/* Header styling */
+header {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
 }
-.list-li img{
-    width:190px;
+
+/* Container for the book list */
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between items */
+  padding: 0;
+  justify-content: center; /* center items */
+}
+
+/* Individual book container */
+.list-li {
+  list-style: none;
+  width: 200px;
+  height: 350px; /* fixed height for all cards */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden; /* hides excess image */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Hover effect for books */
+.list-li:hover {
+  transform: translateY(-5px);
+}
+
+/* Book image styling */
+.list-li img {
+  width: 100%;
+  height: 200px; /* consistent height for all covers */
+  object-fit: contain; /* show full cover without cutting */
+  margin-bottom: 10px;
+}
+
+/* Book title */
+.list-li h3 {
+  font-size: 0.95em;
+  margin: 5px 0;
+  flex-grow: 0;
+}
+
+/* Book author */
+.list-li p {
+  font-size: 0.85em;
+  color: #555;
+  margin: 0;
+  flex-grow: 0;
 }
